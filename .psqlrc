@@ -1,0 +1,27 @@
+\echo ### apply .psqlrc
+-- #
+-- # author: Molchanov Oleg
+-- #
+
+\setenv OM_INSTALL_DIR /home/oleg/src/pg-db/util
+\getenv OM_INSTALL_DIR OM_INSTALL_DIR
+
+select pg_backend_pid() \gset OM_
+
+\setenv PAGER 'less -XS'
+\timing on
+
+\pset null '<Null>'
+\pset linestyle unicode
+\pset border 2
+\pset unicode_border_linestyle double
+\pset unicode_header_linestyle double
+
+\set HISTSIZE 99999
+\set HISTCONTROL ignoreboth
+\set OM_PROMPT1_DEF :PROMPT1
+\set OM_PROMPT2_DEF :PROMPT2
+\set OM_PROMPT3_DEF :PROMPT3
+
+\i :OM_INSTALL_DIR/utilmake.sql
+:pro

@@ -1,0 +1,7 @@
+\echo CONTEXT:
+\echo '  internal - These settings cannot be changed'
+\echo '  postmaster - requires restarting the server'
+\echo '  sighup - re-read postgresql.conf for all / pgreload'
+\echo '  backend - re-read postgresql.conf for new sessions'
+\echo '  superuser - users with the appropriate SET privilege can change them via SET'
+\echo '  user - user is allowed to change their session-local value'
