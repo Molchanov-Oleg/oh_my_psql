@@ -14,7 +14,6 @@ select pg_backend_pid() \gset OM_
 \pset null '<Null>'
 \pset linestyle unicode
 \pset border 2
-\pset unicode_border_linestyle double
 \pset unicode_header_linestyle double
 
 \set HISTSIZE 99999
