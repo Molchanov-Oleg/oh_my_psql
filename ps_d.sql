@@ -22,6 +22,7 @@ select datname,
        pg_blocking_pids(pid) as blocked_by
   from pg_stat_activity
  where datname = :'om_db_name'
+ order by backend_start
 \g
 
 \unset om_db_name
