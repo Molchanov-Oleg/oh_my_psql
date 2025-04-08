@@ -16,6 +16,7 @@ select pg_backend_pid() \gset OM_
 \pset border 2
 \pset unicode_header_linestyle double
 
+\set ON_ERROR_STOP on
 \set HISTSIZE 99999
 \set HISTCONTROL ignoreboth
 \set OM_PROMPT1_DEF :PROMPT1
