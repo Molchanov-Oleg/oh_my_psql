@@ -1,9 +1,9 @@
-\echo ### lock monitor x
+\echo ### :lock_dq in expanded output
 \echo
 -- #
 -- # author: Molchanov Oleg
 -- #
 
 \x
-:lock
+:lock_dq
 \x
