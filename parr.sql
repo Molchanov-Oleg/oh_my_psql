@@ -12,4 +12,9 @@ select name, setting, unit, boot_val, reset_val, source, sourcefile, sourceline,
 
 \ir help-context.txt
 
+\echo
+\echo '\\dconfig[+] [PATTERN]  list configuration parameters'
+\echo 'SHOW name;'
+\echo 'SHOW ALL;'
+
 \unset om_sp_name
