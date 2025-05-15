@@ -10,14 +10,14 @@ current_user
 \gx
 
 \echo Superuser:
-\echo . set session authorization <role>; => session_user, current_user
-\echo . set session authorization default; => connected user
-\echo . reset session authorization; => connected user
+\echo . set session authorization <role>;   session_user, current_user = role
+\echo . set session authorization default;  session_user, current_user = connected user
+\echo . reset session authorization;        session_user, current_user = connected user
 \echo
 \echo User with granted role:
-\echo . set role <role>;
-\echo . set role none; => session_user
-\echo . reset role; => session_user
+\echo . set role <role>;    current_user = role
+\echo . set role none;      current_user = session_user
+\echo . reset role;         current_user = session_user
 \echo
 
 --create role role1;

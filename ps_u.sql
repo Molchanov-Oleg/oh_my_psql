@@ -22,6 +22,7 @@ select datname,
        pg_blocking_pids(pid) as blocked_by
   from pg_stat_activity
  where usename like :'om_use_name'
+ order by 1,3,2
 \g
 
 \unset om_use_name

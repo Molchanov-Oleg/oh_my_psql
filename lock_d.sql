@@ -28,5 +28,5 @@ join pg_stat_activity blocker on blockerl.pid = blocker.pid
                              and blocker.datid = blocked.datid
 where not blockedl.granted
       and blocker.datname = current_database()
-order by 11, 4
+order by 4, 11
 \g
