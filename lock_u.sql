@@ -1,8 +1,11 @@
-\echo ### lock monitor in database (need login to database) (review :lock_c)
+\echo ### lock monitor in database (need login to database) for locked USER
 \echo
 -- #
 -- # author: Molchanov Oleg
 -- #
+
+\prompt 'Locked USER name (text) = ' om_locked_user
+\echo
 
 select
   coalesce(blockerl.relation::regclass::text,blockerl.locktype) as locked_item,
@@ -30,5 +33,8 @@ join pg_stat_activity blocker on blockerl.pid = blocker.pid
                              and blocker.datid = blocked.datid
 where not blockedl.granted
       and blocker.datname = current_database()
+      and blocked.usename = :'om_locked_user'
 order by 4, 11
 \g
+
+\unset om_locked_user

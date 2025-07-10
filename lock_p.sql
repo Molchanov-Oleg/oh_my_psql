@@ -1,8 +1,11 @@
-\echo ### lock monitor in database (need login to database) (review :lock_c)
+\echo ### lock monitor in database (need login to database) for locked PROCESS
 \echo
 -- #
 -- # author: Molchanov Oleg
 -- #
+
+\prompt 'Locked PID (numbers) = ' om_locked_pid
+\echo
 
 select
   coalesce(blockerl.relation::regclass::text,blockerl.locktype) as locked_item,
@@ -30,5 +33,8 @@ join pg_stat_activity blocker on blockerl.pid = blocker.pid
                              and blocker.datid = blocked.datid
 where not blockedl.granted
       and blocker.datname = current_database()
+      and blocked.pid = :om_locked_pid
 order by 4, 11
 \g
+
+\unset om_locked_pid
