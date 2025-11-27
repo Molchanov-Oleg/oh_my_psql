@@ -14,6 +14,7 @@
 \set help '\\i /home/oleg/src/pg-db/util/help.sql'
 \set ident '\\i /home/oleg/src/pg-db/util/ident.sql'
 \set kill_d '\\i /home/oleg/src/pg-db/util/kill_d.sql'
+\set kill_i '\\i /home/oleg/src/pg-db/util/kill_i.sql'
 \set kill_p '\\i /home/oleg/src/pg-db/util/kill_p.sql'
 \set kill_u '\\i /home/oleg/src/pg-db/util/kill_u.sql'
 \set lock_c '\\i /home/oleg/src/pg-db/util/lock_c.sql'
