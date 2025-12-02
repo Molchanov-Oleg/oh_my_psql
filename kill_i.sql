@@ -1,4 +1,4 @@
-\echo ### disconnect user sessions in idle state
+\echo ### disconnect all idle sessions
 \echo
 -- #
 -- # author: Molchanov Oleg
